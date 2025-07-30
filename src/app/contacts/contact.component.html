@@ -1,0 +1,27 @@
+<h2>contact cmp</h2>
+
+<div *ngIf="(obsValue|async); else elseBlock">
+    {{obsValue|async}}
+</div>
+
+<ng-template #elseBlock>
+    Observable is loading.Please wait
+</ng-template>
+
+<div [ngClass]="'primary big'">Sample Text</div>
+<div [ngClass]="['primary' ,'big']">Sample text2</div>
+ <div [ngClass]="cssArray">Sample Text</div>
+  <ul>
+    <li *ngFor="let num of numbers">
+      <div [ngClass]="getClass(num)">{{ num }}</div>
+    </li>
+  </ul>
+<!-- 
+  <ul>
+    <li *ngFor="let movie of movies; let i=index;trackBy:trackByFn">
+
+     {{i}}. {{ movie.title }} - {{movie.director}} <button (click)="remove(i)">remove</button>
+    </li>
+  </ul> -->
+
+
