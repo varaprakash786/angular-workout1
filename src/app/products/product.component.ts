@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common'
-import {Component }from '@angular/core'
+import {Component, OnInit }from '@angular/core'
 import { RouterOutlet } from '@angular/router'
+import { DemoService } from '../demo.service'
 
 
 @Component({
@@ -12,28 +13,22 @@ import { RouterOutlet } from '@angular/router'
 
 })
 
-export class ProductComponent {
+export class ProductComponent implements OnInit{
 
-    products = [
-        {
-      "id": 1,
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549
-    },
-    {
-      "id": 2,
-      "title": "iPhone X",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": 899
-    },
-    {
-      "id": 3,
-      "title": "Samsung Universe 9",
-      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-      "price": 1249
-    }
-    ]
+  constructor(private demoSer:DemoService){
+
+  }
+  products: any;
+
+  ngOnInit(): void {
+    this.products = this.demoSer.products;
+    this.demoSer.todoView(this.products[1])
+  }
+
+  viewItem(item:any){
+    this.demoSer.todoView(item)
+  }
+
 }
 
 

@@ -7,10 +7,16 @@ import { BehaviorSubject } from "rxjs";
 
 export class DemoService {
 
-    private prodInfo: BehaviorSubject<any> = new BehaviorSubject<any>('Krishna')
+    private prodInfo: BehaviorSubject<any> = new BehaviorSubject<any>('Krishna');
+    private _todo = new BehaviorSubject<any>('');
+    readonly todo$ = this._todo.asObservable();
 
     getProdDetails(){
         return this.prodInfo;
+    }
+
+    todoView(data: any){
+        this._todo.next(data)
     }
 
     getList(){
@@ -22,5 +28,26 @@ export class DemoService {
       {'grade':5, 'name':'Mr. Eazi', 'country':'Nigeria'}
     ];
   }
+
+    products = [
+        {
+      "id": 1,
+      "title": "iPhone 9",
+      "description": "An apple mobile which is nothing like apple",
+      "price": 549
+    },
+    {
+      "id": 2,
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899
+    },
+    {
+      "id": 3,
+      "title": "Samsung Universe 9",
+      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+      "price": 1249
+    }
+    ]
 
 }

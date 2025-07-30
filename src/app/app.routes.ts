@@ -11,6 +11,9 @@ import { Services2Component } from './services2/services2.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { Parent2Component } from './parent2/parent2.component';
 import { Parent3Component } from './parent3/parent3.component';
+import { Parent4Component } from './parent4/parent4.component';
+import { Lifecycle1Component } from './lifecycle1/lifecycle1.component';
+import { Lifecycle2Component } from './lifecycle2/lifecycle2.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -28,9 +31,12 @@ export const routes: Routes = [
               {path: 'parent', component: ParentComponent},
                {path: 'parent2', component: Parent2Component},
                {path: 'parent3', component: Parent3Component},
+               {path: 'parent4', component: Parent4Component},
               {path: 'directive', component: DirectiveComponent},
               {path: 'services', component: ServicesComponent},
                {path: 'services2', component: Services2Component},
+                 {path: 'lifecycle1', component: Lifecycle1Component},
+                   {path: 'lifecycle2', component: Lifecycle2Component},
                 {path: 'pipe', component: PipeComponent}
         ]
     },

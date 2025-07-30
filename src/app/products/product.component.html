@@ -2,7 +2,7 @@
 
 <ul>
   <ng-container *ngFor="let prod of products">
-    <li>{{ prod.title }}-- {{ prod.price }}</li> <button class="btn btn-primary">View</button>
+    <li>{{ prod.title }}-- {{ prod.price }}</li> <button class="btn btn-primary" (click)="viewItem(prod)">View</button>
   </ng-container>
 </ul>
 <router-outlet></router-outlet>
