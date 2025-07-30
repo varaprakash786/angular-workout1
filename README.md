@@ -1,5 +1,8 @@
 # App1
 
+check for more in this site
+https://www.tektutorialshub.com/angular-tutorial/#components
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
 
 ## Development server
