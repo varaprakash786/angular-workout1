@@ -20,5 +20,4 @@ export class Child2Component  implements OnChanges {
         }
     }
 
-
 }
